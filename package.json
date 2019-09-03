@@ -1,0 +1,15 @@
+{
+  "name": "testsite",
+  "version": "1.0.0",
+  "description": "For testing Extole stuff",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "reload ./public/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Castberg",
+  "license": "ISC",
+  "dependencies": {
+    "reload": "^3.0.1"
+  }
+}
