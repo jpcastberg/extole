@@ -1,0 +1,16 @@
+{
+  "name": "testsite",
+  "version": "1.0.0",
+  "description": "For testing Extole stuff",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "reload ./public/index.html",
+    "deploy": "gh-pages -d ."
+  },
+  "author": "John Castberg",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.2.0",
+    "reload": "^3.0.1"
+  }
+}
