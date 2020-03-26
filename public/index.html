@@ -13,10 +13,15 @@
         <script type="text/javascript" src="https://john-castberg-test-3.extole.io/core.js"></script>
         <title>extole_test_site</title>
     </head>
-    <body style="background-color: #1f1f1f;">
+    <body style="background-color: #cbcbcb;">
+        <body>
+            
         <div style="background-color: blanchedalmond; display: flex;">Hello!!</div>
         <a href="/extole/page_2.html">Page 2</a>
 
+        <div style="margin-top: 100px;"></div>
+        <button style="margin: 20px;" onclick="extole.createZone({name: 'share_experience'})">2column</button>
+        <button style="margin: 20px;" onclick="extole.createZone({name: 'share_experience_2'})">Mobile</button>
         <span id="zone_target"></span>
 
         <script type="text/javascript">
@@ -24,13 +29,13 @@
             (function(c,e,k,l,a){c[e]=c[e]||{};for(c[e].q=c[e].q||[];a<l.length;)k(l[a++],c[e])})(window,"extole",function(c,e){e[c]=e[c]||function(){e.q.push([c,arguments])}},["createZone"],0);
             /* End Extole */
             
-            extole.createZone({
-                name: 'overlay',
-                element_id: 'zone_target',
-                data: {
-                    //target: 'campaign_id:6795210328950394878'
-                }
-            });
+            // extole.createZone({
+            //     name: 'share_experience',
+            //     element_id: 'zone_target',
+            //     data: {
+            //         //target: 'campaign_id:6795210328950394878'
+            //     }
+            // });
         </script>
     
     </body>
