@@ -4,7 +4,7 @@
   "description": "For testing Extole stuff",
   "main": "server/index.js",
   "scripts": {
-    "start": "reload -p 8080 -d public",
+    "start": "reload -p 80 -d public",
     "deploy": "gh-pages -d public"
   },
   "author": "John Castberg",
