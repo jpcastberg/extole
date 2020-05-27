@@ -28,16 +28,20 @@
             /* Start Extole */
             (function(c,e,k,l,a){c[e]=c[e]||{};for(c[e].q=c[e].q||[];a<l.length;)k(l[a++],c[e])})(window,"extole",function(c,e){e[c]=e[c]||function(){e.q.push([c,arguments])}},["createZone"],0);
             /* End Extole */
+
+            for (let index = 0; index < 10; index++) {
+                extole.createZone({
+                    name: 'share_experience',
+                    element_id: 'zone_target',
+                    data: {
+                        // extole_email: 'jcastberg@extole.com'
+                        // target: 'campaign_id:6815280858031876869'
+                        // locale: 'fr'
+                    }
+                });
+                
+            }
             
-            extole.createZone({
-                name: 'share_experience',
-                element_id: 'zone_target',
-                data: {
-                    // extole_email: 'jcastberg@extole.com'
-                    // target: 'campaign_id:6815280858031876869'
-                    // locale: 'fr'
-                }
-            });
         </script>
     
     </body>
