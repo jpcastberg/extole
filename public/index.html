@@ -37,6 +37,9 @@
 				extole.require(["core-root:///common/client/EventBuilder.js"], function (EventBuilder) {
 					new EventBuilder()
 						.setName("conversion")
+						.setData({
+							labels: ["welcome-offer"]
+						})
 						.setCallback(function (error, response) {
 							alert("conversion created: " + JSON.stringify(response, null, 4))
 						})
