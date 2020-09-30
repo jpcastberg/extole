@@ -32,7 +32,22 @@
 			</nav> -->
 
 		<!-- Banner -->
-			<section class="banner full">
+		<script>
+			function convert() {
+				extole.require(["core-root:///common/client/EventBuilder.js"], function (EventBuilder) {
+					new EventBuilder()
+						.setName("conversion")
+						.setCallback(function (error, response) {
+							alert("conversion created: " + JSON.stringify(response, null, 4))
+						})
+						.create();
+				})
+			}
+		</script>
+		<button onclick="convert()">
+			Trigger conversion!
+		</button>
+			<!-- <section class="banner full">
 				<article>
 					<img src="images/slide01.jpg" alt="" />
 					<div class="inner">
@@ -78,7 +93,7 @@
 						</header>
 					</div>
 				</article>
-			</section>
+			</section> -->
 
 		<!-- One -->
 			<section id="one" class="wrapper style2">
