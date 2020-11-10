@@ -53,11 +53,19 @@
 						.create();
 				})
 			}
+
+			function share() {
+				navigator.share({
+					title: 'ITS #YABOI',
+					text: '#YABOI ALL UP IN THIS BITCH, LET THE HOMIES KNOW WUTS COOKIN',
+					url: 'https://www.gucci.com',
+				})
+			}
 		</script>
 		<div style="display: flex; flex-direction: row; align-items: center; justify-content: center; background-color: blueviolet;">
 			<br>
-			<button style="border: 2px solid black; margin: 15px;" onclick="convert()">
-				Trigger conversion!
+			<button style="border: 2px solid black; margin: 15px;" onclick="share()">
+				SHARE IT UP
 			</button>
 			<br>
 		</div>
