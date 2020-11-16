@@ -10,17 +10,50 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- <script src="https:///john-castberg-test.extole.io/core.js?debug=3"></script> -->
-		<script src="https://extole-creatives.lo.extole.io/core.js?debug=3"></script>
 		<script>
-			// extole.createZone({
-			// 	name: "global_footer",
-			// 	element_id: "global-footer",
-			// 	data: {
-			// 		labels: ["refer-a-friend"],
-			// 		debug: "3"
-			// 	}
-			// });
+			(function(c,b,f,k,a){c[b]=c[b]||{};for(c[b].q=c[b].q||[];a<k.length;)f(k[a++],c[b])})(window,"extole",function (c,b){b[c]=b[c]||function (){b.q.push([c,arguments])}},["createZone", "log"],0);
+
+			var PR_PROGRAM_DOMAIN = "john-castberg-test.extole.io";
+			var LO_PROGRAM_DOMAIN = "extole-creatives.lo.extole.io";
+
+			var queryParams = deserialize(location.search);
+			var coreJsScript = document.createElement("script");
+			var programDomain;
+
+			if (queryParams.program_domain) {
+				programDomain = queryParams.programDomain;
+			} else if (queryParams.env === "lo") {
+				programDomain = LO_PROGRAM_DOMAIN;
+			} else {
+				programDomain = PR_PROGRAM_DOMAIN;
+			}
+
+			coreJsScript.src = "https://" + programDomain + "/core.js?debug=3";
+			document.head.appendChild(coreJsScript);
+
+			if (queryParams.pop === "true") {
+				extole.createZone({
+					name: "global_footer",
+					element_id: "global-footer",
+					data: {
+						labels: ["refer-a-friend"],
+						debug: "3"
+					}
+				});
+			}
+
+			function deserialize(queryString) {
+				var response = {};
+				if (!queryString) {
+					return response;
+				}
+				var querySplit = (queryString.match(/^\?/) ? queryString.slice(1) : queryString).split("&");
+				for (var i = 0; i < querySplit.length; i++) {
+					var keyValue = querySplit[i].split("=");
+					response[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+				}
+				return response;
+			}
 		</script>
 	</head>
 	<body>
