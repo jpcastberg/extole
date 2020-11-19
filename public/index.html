@@ -20,10 +20,10 @@
 			var coreJsScript = document.createElement("script");
 			var programDomain;
 
-			if (queryParams.program_domain) {
-				programDomain = queryParams.programDomain;
-			} else if (queryParams.env === "lo") {
+			if (queryParams.env === "lo") {
 				programDomain = LO_PROGRAM_DOMAIN;
+			} else if (queryParams.env) {
+				programDomain = queryParams.env;
 			} else {
 				programDomain = PR_PROGRAM_DOMAIN;
 			}
@@ -36,8 +36,13 @@
 					name: "global_footer",
 					element_id: "global-footer",
 					data: {
-						labels: ["refer-a-friend"],
-						debug: "3"
+						labels: ["refer-a-friend"]
+					}
+				});
+				extole.createZone({
+					name: "overlay",
+					data: {
+						labels: ["refer-a-friend"]
 					}
 				});
 			}
